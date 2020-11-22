@@ -182,8 +182,8 @@ def start_end(start_date, end_date):
     
     # Run query
     results = session.query(*sel)\
-              .filter(Measurement.date>= start_date)\
-              .filter(Measurement.date <= end_date).all()
+              .filter(measurement.date>= start_date)\
+              .filter(measurement.date <= end_date).all()
 
     session.close()
     
